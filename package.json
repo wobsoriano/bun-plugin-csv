@@ -25,12 +25,12 @@
     "bun"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/wobsoriano/pkg-name#readme",
+  "homepage": "https://github.com/wobsoriano/bun-plugin-csv#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wobsoriano/pkg-name.git"
+    "url": "git+https://github.com/wobsoriano/bun-plugin-csv.git"
   },
-  "bugs": "https://github.com/wobsoriano/pkg-name/issues",
+  "bugs": "https://github.com/wobsoriano/bun-plugin-csv/issues",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "devDependencies": {
     "bumpp": "^9.1.1",
