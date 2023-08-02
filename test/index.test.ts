@@ -1,12 +1,19 @@
-import { describe, it, expect } from 'bun:test'
-import { one, two } from '../src'
+import './plugin'
 
-describe('should', () => {
-  it('export 1', () => {
-    expect(one).toBe(1)
-  })
+import { expect, test } from 'bun:test'
 
-  it('export 2', () => {
-    expect(two).toBe(2)
-  })
+test('import and extract csv', async () => {
+  const result = await import('./fruits.csv').then((r) => r.default)
+  expect(result).toMatchObject([
+    {
+      type: "apples",
+      count: "7"
+    }, {
+      type: "pears",
+      count: "4"
+    }, {
+      type: "bananas",
+      count: "5"
+    }
+  ])
 })
