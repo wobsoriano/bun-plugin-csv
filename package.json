@@ -14,7 +14,8 @@
   "description": "A Bun plugin which converts .csv and .tsv files into JavaScript modules.",
   "scripts": {
     "build": "bun run build.mjs",
-    "prepublishOnly": "bun run build"
+    "prepublishOnly": "bun run build",
+    "release": "bumpp && npm publish"
   },
   "files": [
     "dist",
@@ -32,6 +33,7 @@
   "bugs": "https://github.com/wobsoriano/pkg-name/issues",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "devDependencies": {
+    "bumpp": "^9.1.1",
     "bun-plugin-dts": "^0.1.0",
     "bun-types": "^0.7.0",
     "typescript": "^5.1.6",
