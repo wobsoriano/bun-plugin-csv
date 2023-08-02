@@ -2,14 +2,23 @@
   "name": "bun-plugin-csv",
   "version": "0.0.0",
   "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./client.d.ts"
+    }
+  },
   "types": "dist/index.d.ts",
-  "description": "",
+  "description": "A Bun plugin which converts .csv and .tsv files into JavaScript modules.",
   "scripts": {
     "build": "bun run build.mjs",
     "prepublishOnly": "bun run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "client.d.ts"
   ],
   "keywords": [
     "bun"
@@ -25,6 +34,10 @@
   "devDependencies": {
     "bun-plugin-dts": "^0.1.0",
     "bun-types": "^0.7.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "@types/d3-dsv": "^3.0.1"
+  },
+  "dependencies": {
+    "d3-dsv": "^3.0.1"
   }
 }

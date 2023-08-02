@@ -1,24 +1,53 @@
-# bun starter
+# bun-plugin-csv
 
-## Getting Started
+A Bun plugin which converts `.csv` and `.tsv` files into JavaScript modules.
 
-Click the [Use this template](https://github.com/wobsoriano/bun-lib-starter/generate) button to create a new repository with the contents starter.
-
-OR
-
-Run `bun create wobsoriano/bun-lib-starter ./my-lib`.
-
-## Setup
+## Install
 
 ```bash
-# install dependencies
-bun install
+bun install bun-plugin-csv
+```
 
-# test the app
-bun test
+## Usage
 
-# build the app, available under dist
-bun run build
+```ts
+import csv from 'bun-plugin-csv'
+
+await Bun.build({
+  entrypoints: ['./src/index.ts'],
+  outdir: './dist',
+  plugins: [csv()]
+})
+```
+
+Suppose that you have a CSV which contains some info:
+
+```csv
+type,count
+apples,7
+pears,4
+bananas,5
+```
+
+The import will provide an `Array` of `Objects` representing rows from the CSV file:
+
+```ts
+import fruit from './fruit.csv';
+
+console.log(fruit);
+// [
+//   { type: 'apples', count: '7' },
+//   { type: 'pears', count: '4' },
+//   { type: 'bananas', count: '5' }
+// ]
+```
+
+## TypeScript Intellisense
+
+Add the following to your `.d.ts` file:
+
+```ts
+/// <reference types="bun-plugin-csv/client" />
 ```
 
 ## License
