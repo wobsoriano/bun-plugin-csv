@@ -33,11 +33,11 @@
   "bugs": "https://github.com/wobsoriano/bun-plugin-csv/issues",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "devDependencies": {
-    "bumpp": "^9.1.1",
+    "@types/d3-dsv": "^3.0.2",
+    "bumpp": "^9.2.0",
     "bun-plugin-dts": "^0.1.0",
-    "bun-types": "^0.7.0",
-    "typescript": "^5.1.6",
-    "@types/d3-dsv": "^3.0.1"
+    "bun-types": "^1.0.1",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "d3-dsv": "^3.0.1"
