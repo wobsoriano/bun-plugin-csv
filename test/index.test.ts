@@ -1,6 +1,5 @@
-import csv from '../src'
-
 import { expect, test } from 'bun:test'
+import csv from '../src'
 
 test('import and extract csv', async () => {
   Bun.plugin(csv())
