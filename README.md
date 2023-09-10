@@ -5,7 +5,7 @@ A Bun plugin which converts `.csv` and `.tsv` files into JavaScript modules.
 ## Install
 
 ```bash
-bun install bun-plugin-csv
+bun add bun-plugin-csv -d
 ```
 
 ## Usage
