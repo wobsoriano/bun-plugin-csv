@@ -15,7 +15,8 @@ import csv from 'bun-plugin-csv'
 
 await Bun.build({
   entrypoints: ['./src/index.ts'],
-  outdir: './dist',
+  // other config
+
   plugins: [csv()]
 })
 ```
