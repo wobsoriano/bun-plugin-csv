@@ -1,10 +1,12 @@
-import './plugin'
+import csv from '../src'
 
 import { expect, test } from 'bun:test'
 
 test('import and extract csv', async () => {
-  const result = await import('./fruits.csv').then((r) => r.default)
-  expect(result).toMatchObject([
+  Bun.plugin(csv())
+
+  const { default: mod } = await import('./fruits.csv')
+  expect(mod).toMatchObject([
     {
       type: "apples",
       count: "7"
