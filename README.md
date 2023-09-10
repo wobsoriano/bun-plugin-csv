@@ -8,7 +8,7 @@ A Bun plugin which converts `.csv` and `.tsv` files into JavaScript modules.
 bun add bun-plugin-csv -d
 ```
 
-## Usage
+## Bundler Usage
 
 ```ts
 import csv from 'bun-plugin-csv'
@@ -41,6 +41,22 @@ console.log(fruit);
 //   { type: 'pears', count: '4' },
 //   { type: 'bananas', count: '5' }
 // ]
+```
+
+## Runtime usage
+
+To use as a runtime plugin, create a file that registers the plugin:
+
+```ts
+import csv from 'bun-plugin-csv'
+
+Bun.plugin(csv())
+```
+
+Then preload it in your `bunfig.toml`:
+
+```toml
+preload = ['./csv.ts']
 ```
 
 ## TypeScript Intellisense
