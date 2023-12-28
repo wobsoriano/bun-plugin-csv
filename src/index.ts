@@ -1,8 +1,9 @@
+import type { BunPlugin } from 'bun';
 import { csvParse, tsvParse } from 'd3-dsv';
 
 const parsers = { csv: csvParse, tsv: tsvParse };
 
-export default function csvPlugin(): import('bun').BunPlugin {
+export default function csvPlugin() {
   return {
     name: 'bun-plugin-csv',
     setup({ onLoad }) {
@@ -19,5 +20,5 @@ export default function csvPlugin(): import('bun').BunPlugin {
         }
       })
     }
-  }
+  } satisfies BunPlugin
 }
