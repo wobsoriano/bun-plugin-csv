@@ -1,6 +1,6 @@
 {
   "name": "bun-plugin-csv",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A Bun plugin which converts .csv and .tsv files into JavaScript modules.",
   "scripts": {
     "build": "bunchee",
