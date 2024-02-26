@@ -37,10 +37,10 @@
   "bugs": "https://github.com/wobsoriano/bun-plugin-csv/issues",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "devDependencies": {
-    "@types/bun": "^1.0.0",
+    "@types/bun": "^1.0.7",
     "@types/d3-dsv": "^3.0.7",
-    "bumpp": "^9.2.0",
-    "bunchee": "^4.2.6",
+    "bumpp": "^9.3.0",
+    "bunchee": "^4.4.8",
     "typescript": "^5.3.3"
   },
   "dependencies": {
