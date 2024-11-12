@@ -64,7 +64,7 @@ preload = ['./csv.ts']
 Add the following to your `.d.ts` file:
 
 ```ts
-/// <reference types="bun-plugin-csv/client" />
+/// <reference types="bun-plugin-csv/env" />
 ```
 
 ## License

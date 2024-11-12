@@ -1,31 +1,27 @@
 {
   "name": "bun-plugin-csv",
+  "type": "module",
   "version": "0.1.4",
   "description": "A Bun plugin which converts .csv and .tsv files into JavaScript modules.",
   "scripts": {
-    "build": "bunchee",
+    "build": "bun run build.ts",
     "prepublishOnly": "bun run build",
     "release": "bumpp && npm publish"
   },
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      },
-      "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      }
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
-    "./client": "./client.d.ts"
+    "./env": "./env.d.ts"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
-    "client.d.ts"
+    "env.d.ts"
   ],
   "keywords": [
     "bun"
@@ -39,11 +35,10 @@
   "bugs": "https://github.com/wobsoriano/bun-plugin-csv/issues",
   "author": "Robert Soriano <sorianorobertc@gmail.com>",
   "devDependencies": {
-    "@types/bun": "^1.0.7",
+    "@types/bun": "^1.1.13",
     "@types/d3-dsv": "^3.0.7",
-    "bumpp": "^9.3.0",
-    "bunchee": "^4.4.8",
-    "typescript": "^5.3.3"
+    "bumpp": "^9.8.1",
+    "bun-plugin-dts": "^0.3.0"
   },
   "dependencies": {
     "d3-dsv": "^3.0.1"
